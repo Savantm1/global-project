@@ -1,0 +1,58 @@
+.header {
+  border: 2px solid red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  max-width: 1100px;
+  width: 100%;
+
+  .logo {
+
+   @include link_style_none;
+   
+   display: flex;
+   align-items: center;
+
+
+   &__text {
+     text-transform: uppercase;
+     font-weight: 600;
+     margin-left: 10px;
+   }
+
+  }
+
+  &__form_btn {
+
+    @include link_style_none;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 5px 15px;
+    background-color: $blue;
+  }
+
+  &__hamburger {
+    height: 21px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    span {
+      position: relative;
+      width:40px;
+      border-radius:2px;
+      height: 3px;
+      background-color: #fff;
+      
+      &:nth-child(2){
+        width:30px;
+      }
+
+    }
+  }
+
+  
+}

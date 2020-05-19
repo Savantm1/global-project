@@ -1,0 +1,117 @@
+.paginator {
+ z-index: 10;
+
+   position: absolute;
+   border: 2px solid red;
+   height: 80%;
+   left:0;
+   top:100px;
+   width: 130px;
+
+ 
+  
+   &__list {
+
+     @include list_style_none;
+     
+     position: relative;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: flex-end;
+     height: 100%;
+
+     &::before {
+
+      position: absolute;
+      left:50px;
+      top:1.5%;
+
+      content:'';
+      width:3px;
+      background-color: $grey;
+      height: 97%;
+      
+     }
+    
+   }
+
+   &__link {
+     @include link_style_none;
+     color: $grey;
+     position: relative;
+     display: none;
+    
+   }
+   
+
+   &__item {
+
+    cursor: pointer;
+    width:80px;
+    position: relative;
+    padding-left:20px;
+    height: 20px;
+
+      &::before {
+
+         content:'';
+         position: absolute;
+         left: 2px;
+         width:6px;
+         height: 6px;
+         border-radius: 50%;
+         background-color: #fff;
+         top:50%;
+         transform: translatey(-50%);
+
+      }
+
+      &::after {
+       width: 30px;
+       position: absolute;
+       color:$grey;
+       left: 20px;
+      }
+
+    &:nth-child(1)::after {
+     content:"01";
+    }
+    &:nth-child(2)::after {
+     content:"02";
+    }
+    &:nth-child(3)::after {
+     content:"03";
+    }
+    &:nth-child(4)::after {
+     content:"04";
+    }
+    &:nth-child(5)::after {
+     content:"05";
+    }
+
+   }
+
+   &__item--active {
+    
+
+    &:nth-child(1)::after {
+     color: #fff;
+     left:-30px;
+    }
+
+     &::before {
+
+      background-color: $blue;
+     }
+
+     .paginator__link {
+      color: #fff;
+
+      display: inline;
+     }
+    }
+ }
+
+
+

@@ -1,0 +1,93 @@
+html {
+  height: 100%;
+  margin:0;
+  padding:0;
+  font-size: 16px;
+  color:#fff;
+  // @include tablets() {
+  //   font-size: 13px;
+  // }
+
+  @include phones() {
+    font-size: 13px;
+  } 
+
+  line-height: 1.42;
+  font-family: 'Ubuntu';
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat';
+  height: 100%;
+  background-color: $black;
+}
+
+.container {
+
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: absolute;
+  border: 2px solid green;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 650px;
+  overflow: hidden;
+  padding: 30px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  flex-direction: column;
+}
+
+.section {
+  height: 100%;
+  min-height: 650px;
+  margin: 0 auto;
+  border: 2px solid blue;
+  width: 80%;
+
+  @include tablets() {
+
+    min-height: 1000px;
+    }
+
+}
+
+.one-page-scroll {
+  height: 100%;
+  transition: transform 1s;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  transition: all 3s ease-out;
+  
+}
+
+img {
+  // width: 100%;
+  // height: 100%;
+}
+
+.decoration {
+  z-index: 10;
+  position: absolute;
+}
+
+
