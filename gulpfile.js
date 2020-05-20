@@ -61,7 +61,7 @@ task('copy:fonts', () => {
 })
 
 task('copy:sprite', () => {
-  return src(`${SRC_PATH}/img/icons/sprite.svg`)
+  return src(`${SRC_PATH}/img/icons/*.*`)
     .pipe(dest(DIST_PATH))
     .pipe(reload({
       stream: true
@@ -99,7 +99,7 @@ const libs = [
 
 
 task('scripts', () => {
-  return src([...JS_LIBS, 'src/scripts/*.js'])
+  return src(['src/scripts/*.js'])  //return src([...JS_LIBS, 'src/scripts/*.js'])
     .pipe(sourcemaps.init())
     .pipe(concat('main.min.js', {
       newLine: ';'
@@ -127,7 +127,7 @@ task('server', () => {
 });
 
 watch('./src/styles/**/*.scss', series('styles'));
-watch('./src/img/icons/sprite.svg', series('copy:sprite'));
+watch('./src/img/icons/*.*', series('copy:sprite'));
 watch('./src/img/*.*', series('copy:img'));
 watch('./src/*.html', series('copy:html'));
 watch('./src/fonts/*.*', series('copy:fonts'));

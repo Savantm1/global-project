@@ -1,13 +1,10 @@
 .paginator {
- z-index: 10;
-
-   position: absolute;
+ 
+   z-index: 10;
    border: 2px solid red;
-   height: 80%;
-   left:0;
-   top:100px;
    width: 130px;
-
+   height: 95%;
+   align-self: center;
  
   
    &__list {
@@ -41,6 +38,7 @@
      color: $grey;
      position: relative;
      display: none;
+     
     
    }
    
@@ -53,42 +51,48 @@
     padding-left:20px;
     height: 20px;
 
+    &:hover::after {
+      transition: all ease 0.4s;
+      color: #fff;
+    }
+
+
       &::before {
 
-         content:'';
-         position: absolute;
-         left: 2px;
-         width:6px;
-         height: 6px;
-         border-radius: 50%;
-         background-color: #fff;
-         top:50%;
-         transform: translatey(-50%);
+        content:'';
+        position: absolute;
+        left: 2px;
+        width:6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #fff;
+        top:50%;
+        transform: translatey(-50%);
 
       }
 
       &::after {
-       width: 30px;
-       position: absolute;
-       color:$grey;
-       left: 20px;
+        width: 30px;
+        position: absolute;
+        color:$grey;
+        left: 20px;
       }
 
-    &:nth-child(1)::after {
-     content:"01";
-    }
-    &:nth-child(2)::after {
-     content:"02";
-    }
-    &:nth-child(3)::after {
-     content:"03";
-    }
-    &:nth-child(4)::after {
-     content:"04";
-    }
-    &:nth-child(5)::after {
-     content:"05";
-    }
+      &:nth-child(1)::after {
+        content:"01";
+      }
+      &:nth-child(2)::after {
+        content:"02";
+      }
+      &:nth-child(3)::after {
+        content:"03";
+      }
+      &:nth-child(4)::after {
+        content:"04";
+      }
+      &:nth-child(5)::after {
+        content:"05";
+      }
 
    }
 

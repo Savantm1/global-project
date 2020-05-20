@@ -4,7 +4,7 @@ module.exports = {
   STYLE_LIBS : [
     'node_modules/normalize.css/normalize.css'
   ],
-  JS_LIBS : [
-    'node_modules/jquery/dist/jquery.js'
-  ]
+  // JS_LIBS : [
+  //   'node_modules/jquery/dist/jquery.js'
+  // ]
  }
