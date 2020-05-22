@@ -1,0 +1,103 @@
+.hire_us{
+ 
+ display:flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ 
+  &__title{
+
+   margin-top: -10%;
+   margin-bottom: 10%;
+   font-size: 30px;
+
+  }
+
+  .form {
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+
+   &__row {
+
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+ 
+    
+    .form__btn:last-child {
+     margin-right: 0px;
+    }
+
+   }
+
+   &__btn {
+    display: block;
+    cursor: pointer;
+
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin-right: 30px;
+    padding: 10px 0px;
+
+    width: 160px;
+    text-align: center;
+
+    input {
+
+     position: relative;
+     
+     &:checked::before {
+      position: absolute;
+      top:-16px;
+      left:-12px;
+      content:"✔";
+      width: 10px;
+      height: 10px;
+      
+     }
+
+    }
+   }
+
+   &__field {
+
+    background-color: #000;
+    font-size: 24px;
+    color: #fff;
+    border: none;
+    border-bottom: 2px solid #fff;
+    width: 45%;
+
+    &::-webkit-input-placeholder {color:#fff;}
+    &::-moz-placeholder          {color:#fff;}/* Firefox 19+ */
+    &:-moz-placeholder           {color:#fff;}/* Firefox 18- */
+    &:-ms-input-placeholder      {color:#fff;}
+   }
+
+   &__submit {
+
+    background-color: $blue;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 300px;
+    padding: 10px 0px;
+    border-radius: 5px;
+    
+    &:hover {
+     width:295px;
+     background-color: rgb(16, 43, 197);
+    }
+
+    &:active {
+     width:290px;
+     background-color: rgb(22, 42, 155);
+    }
+   }
+
+
+  }
+}

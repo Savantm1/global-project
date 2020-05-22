@@ -33,8 +33,14 @@
     border-radius:5px;
 
     &:hover {
-       text-decoration: underline;
-    }
+      padding: 5px 12px;
+      background-color: rgb(16, 43, 197);
+     }
+ 
+     &:active {
+      padding: 5px 12px;
+      background-color: rgb(22, 42, 155);
+     }
   }
 
   &__hamburger {

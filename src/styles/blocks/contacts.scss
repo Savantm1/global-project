@@ -1,7 +1,7 @@
 .contact {
 
    background-image: url("./img/contact-visual.png");
-   background-position:center;
+   background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
 
@@ -9,63 +9,63 @@
    flex-direction: column;
    align-items: flex-end;
    justify-content: center;
-   
+
 
    &__block {
 
-    width:310px;
-    height: 400px;
-    background-color: #000;
+      width: 310px;
+      height: 400px;
+      background-color: #000;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    font-weight: bold;
-    
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      font-weight: bold;
+
    }
 
    &__btn {
 
-    display:block;
-    width: 150px;
-    padding: 10px 0px;
-    text-align: center;
+      display: block;
+      width: 150px;
+      padding: 10px 0px;
+      text-align: center;
 
-    &:hover {
-     
-    }
-    
-    &--blue{
-     background-color: #1769ff;
-     
-       &:hover {
+      &:hover {}
 
-        background-color: #6769ff;
+      &--blue {
+         background-color: #1769ff;
 
-       }
-    }
-    &--pink{
+         &:hover {
 
-       background-color: #ea4c89;
+            background-color: #6769ff;
 
-       &:hover {
-        background-color: #ff7dab;
+         }
+      }
 
-       }
-    }
-    &--darkblue{
+      &--pink {
 
-       background-color: $blue;
+         background-color: #ea4c89;
 
-       &:hover {
+         &:hover {
+            background-color: #ff7dab;
 
-        background-color: #1547a5;
+         }
+      }
 
-       }
-    }
+      &--darkblue {
 
-    
+         background-color: $blue;
+
+         &:hover {
+
+            background-color: #1547a5;
+
+         }
+      }
+
+
    }
 
 }
