@@ -1,0 +1,25 @@
+
+.device_view--active {
+
+ transform: translateZ(-300px) rotateY(38deg);
+ transition: all ease 0.5s;
+ border-radius: 20px;
+ box-shadow: 0 0 45px 25px $blue;
+
+}
+
+.device_view_window {
+ display: none;
+ z-index: 100;
+ position: absolute;
+ background-color: #fff;
+ opacity: 0;
+ left:0;
+ top:0;
+ bottom:0;
+ right:0;
+
+ &--active {
+  display: block
+ }
+}

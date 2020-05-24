@@ -5,6 +5,10 @@
    width: 130px;
    height: 95%;
    align-self: center;
+
+   @include tablets() {
+     display: none;
+   }
  
   
    &__list {

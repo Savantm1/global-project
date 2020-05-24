@@ -4,13 +4,17 @@ html {
   padding:0;
   font-size: 16px;
   color:#fff;
-  // @include tablets() {
-  //   font-size: 13px;
-  // }
 
-  @include phones() {
-    font-size: 13px;
-  } 
+  @include laptops() {
+    font-size: 15px;
+  }
+
+  @include tablets() {
+    font-size: 14px;
+  }
+  // @include phones() {
+  //   font-size: 13px;
+  // } 
 
   line-height: 1.42;
   font-family: 'Ubuntu';
@@ -38,7 +42,7 @@ body {
   border: 2px solid green;
 }
 
-.wrapper {
+.device_view {
   position: relative;
   width: 100%;
   min-height: 650px;
@@ -50,17 +54,42 @@ body {
   align-items: center;
 
   flex-direction: column;
+
+  @include tablets() {
+    padding: 15px 0px;
+  }
+}
+
+.wrapper {
+  perspective: 500px;
+  position: relative;
+  width: 100%;
+  min-height: 650px;
+  height: 100%;
+  overflow: hidden;
+  padding: 30px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include tablets() {
+
+    min-height: auto;
+    padding: 15px;
+  }
+
 }
 
 .section {
   height: 100%;
   margin: 0 auto;
-  border: 2px solid blue;
+  // border: 2px solid blue;
   width: 80%;
 
   @include tablets() {
-
-    min-height: 1000px;
+    justify-content: center;
+    min-height: auto;
+    width: 95%;
     }
 
 }

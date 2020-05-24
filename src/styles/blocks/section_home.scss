@@ -2,14 +2,20 @@
    
    display:flex;
    flex-direction: column;
-   justify-content: center;
+   justify-content: flex-start;
+   
+   @include tablets() {
+      width: 95%;
+
+   }
 
    .top_content {
-
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
     position: relative;
-    height: 475px;
+   //  height: 475px;
     border-bottom: 2px solid $grey;
-    margin-bottom: 10px;
    
     &::before {
        content:'';
@@ -23,18 +29,37 @@
        transform: translateY(-50%);
 
     }
+   .left_side{
+      width: 50%;
+      margin-bottom: 40px;
+   }
 
-      &__image {
+   .right_side {
+      width:50%;
+      position: relative;
 
-       position: absolute;
-       right: -15px;
-       top: 12px;
+      .top_content__image {
+         position: absolute;
+         bottom: 0;
+         width: 100%;
+
+
+      //  @include laptop() {
+      //    width: 70%;
+      //  }
       }
+   }
 
       &__title {
 
        margin-top: 40px;
        margin-bottom: 40px;
+       display: block;
+       width: 50%;
+
+       @include tablets() {
+          font-size: 40px;
+       }
       }
 
    }
@@ -48,16 +73,25 @@
     display: flex;
     justify-content: space-between;
 
+    @include tablets() {
+      flex-direction: column;
+      margin-top: 10px;
+   }
 
    }
 
    .list__item {
-      width:30%;
+      // width:30%;
       display: flex;
       flex-direction: column;
       align-items: center;
       color: $grey;
       transition: all ease 0.3s;
+
+      @include tablets() {
+         align-items: flex-start;
+         margin-bottom: 10px;
+      }
       
       &:hover {
          color:#fff;
@@ -68,6 +102,7 @@
        text-transform: uppercase;
        font-size: 18px;
        font-weight: bold;
+       text-align: center;
 
       }
       
@@ -75,6 +110,10 @@
          text-align: center;
          margin-top: 10px;
        line-height: 1.42;
+
+       @include tablets() {
+         margin-top: 5px;
+      }
       }
       
    }
@@ -85,7 +124,7 @@
 
 .title {
 
- font-size:68px;
+ font-size:50px;
  font-weight: 600;
  
 }
