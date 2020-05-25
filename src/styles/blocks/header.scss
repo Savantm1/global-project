@@ -32,6 +32,10 @@
     background-color: $blue;
     border-radius:5px;
 
+    @include phones(){
+      margin-right: 60px;
+    }
+
     &:hover {
       padding: 5px 12px;
       background-color: rgb(16, 43, 197);

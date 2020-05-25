@@ -6,6 +6,10 @@
  width:80%;
  border: 2px solid yellow;
 
+ @include tablets {
+   width: 100%;
+ }
+
   .arrow {
 
    width:55px;
@@ -44,8 +48,8 @@
    &__title {
 
     font-size: 30px;
-    margin-top:-3%;
-    margin-bottom: 3%;
+    margin-top:-15%;
+    margin-bottom: 15%;
    }
   
    &__list {
@@ -58,6 +62,9 @@
    }
 
    &__item {
+     @include phones() {
+       display: none;
+     }
     border: 2px solid purple;
     display: flex;
     flex-direction: column;
@@ -65,6 +72,7 @@
     color:$grey;
     
     .item__title {
+     text-align: center;
      text-transform: uppercase;
      font-weight: bold;
      font-size: 18px;
@@ -82,11 +90,16 @@
 
    &__item--active {
 
+     @include phones(){
+       display: flex;
+     }
+
     color:#fff;
-    width:45%;
+    // width:45%;
 
     .item__title{
      font-size: 22px;
+     text-align: center;
     }
 
     .item__description {
@@ -96,8 +109,8 @@
 
     .slider__img {
      
-     width: 90%;
-     height: initial;
+    //  width: 70%;
+    //  height: initial;
 
     }
 
@@ -106,16 +119,9 @@
    &__img {
 
     border-radius: 50%;
-    width: 90%;
-    height: 175px;
+    width: 70%;
+    height: 70%;
 
-     @media screen and (max-width: 1024px) {
-      height: 150px;
-    }
-
-     @include laptops () {
-       height: 120px;
-     }
 
    }
 
