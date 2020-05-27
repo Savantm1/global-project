@@ -39,7 +39,7 @@ body {
 
   height: 100%;
   position: relative;
-  border: 2px solid green;
+
 }
 
 .device_view {
@@ -81,12 +81,18 @@ body {
 }
 
 .section {
+  visibility: hidden;
+  opacity: 0;
+  transition: all ease 0.5s;
+  position: absolute;
+    left: 18%;
   height: 100%;
   margin: 0 auto;
   // border: 2px solid blue;
   width: 80%;
 
   @include tablets() {
+    left:0;
     justify-content: center;
     min-height: auto;
     width: 95%;
@@ -105,7 +111,8 @@ body {
   width: 1px;
   height: 1px;
   margin: -1px;
-  transition: all 3s ease-out;
+  transition: all ease 0.5s;
+  opacity: 0;
   
 }
 
@@ -119,4 +126,8 @@ img {
   position: absolute;
 }
 
+.section--active {
+  visibility: visible;
+  opacity: 1;
+}
 

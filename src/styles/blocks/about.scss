@@ -1,4 +1,9 @@
 .about {
+
+ visibility: hidden;
+ opacity: 0;
+ transition: all ease 0.5s;
+ 
  background-image: url("./img/about-visual.png");
  background-repeat: no-repeat;
  background-position: right;
