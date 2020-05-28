@@ -65,6 +65,11 @@
     width: 160px;
     text-align: center;
 
+    &--active {
+      background-color: #0f33ff;
+      border-color: #0f33ff;
+    }
+
     @include phones() {
       margin-top: 20px;
       margin-bottom: 20px;
@@ -77,17 +82,21 @@
       }
     }
 
-    input {
+    .checkbox {
 
      position: relative;
      
-     &:checked::before {
-      position: absolute;
-      top:-16px;
-      left:-12px;
-      content:"✔";
-      width: 10px;
-      height: 10px;
+     &--active {
+       
+       &::before{
+
+         position: absolute;
+         top:-16px;
+         left:-12px;
+         content:"✔";
+         width: 10px;
+         height: 10px;
+       }
       
      }
 
@@ -122,6 +131,7 @@
     width: 300px;
     padding: 10px 0px;
     border-radius: 5px;
+
 
     @include phones() {
       margin-top: 20px;
