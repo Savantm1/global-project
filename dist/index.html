@@ -165,13 +165,23 @@
                             </label>
                         </div>
                         <div class="form__row">
-                            <input type="text" class="form__name form__field" name='name'placeholder="Name">
-                            <span class="error"></span>
-                            <input type="email" class="form__email form__field" name='email' placeholder="Email">
-                            <span class="error"></span>
+                            <div class="name_block">
+                                <input type="text" class="form__name form__field" name='name'placeholder="Name">
+                                <div class="error"></div>
+                            </div>
+                            <div class="mail_block">
+                                <input type="email" class="form__email form__field" name='email' placeholder="Email">
+                                <div class="error"></div>
+                            </div>
                         </div>
                         <button class="form__submit" type="submit">Send Request</button>
                     </form>
+                    <div class="message visually-hidden">
+                        <div class="message__block">
+                            <p class="message__text">Thank you! Message send.</p>
+                            <a href="#" class="message__btn">close</a>
+                        </div>
+                    </div>
                 </section>
             </div>    
         </div>

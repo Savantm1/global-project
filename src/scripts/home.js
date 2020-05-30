@@ -19,9 +19,6 @@ let arrowRight = document.querySelector('.right_arrow');
 
 
 
-
-
-
 let removeActive = () => {
   
   for (let item of section) {

@@ -1,6 +1,8 @@
 
 let myForm = document.querySelector('#form');
 let submit = document.querySelector('.form__submit');
+let closeMessage = document.querySelector('.message__btn');
+let message = document.querySelector('.message');
 
 
 
@@ -46,8 +48,19 @@ submit.addEventListener('click', (evt) => {
      console.log(xhr.response.status);
    });
    
-   // messageHide();
+   messageHide();
 
  };
 
 });
+
+let messageHide = ()=> {
+ message.classList.remove('visually-hidden');
+
+ closeMessage.addEventListener('click', (evt) => {
+
+   evt.preventDefault();
+   message.classList.add('visually-hidden');
+  
+ })
+}
