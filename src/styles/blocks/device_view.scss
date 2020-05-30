@@ -1,14 +1,21 @@
 
+
+.device_view {
+ transition: all ease 0.5s;
+
+}
 .device_view--active {
 
  transform: translateZ(-300px) rotateY(38deg);
- transition: all ease 0.5s;
  border-radius: 20px;
  box-shadow: 0 0 45px 25px $blue;
+
 
 }
 
 .device_view_window {
+ cursor: pointer;
+
  display: none;
  z-index: 100;
  position: absolute;
@@ -21,5 +28,6 @@
 
  &--active {
   display: block
+  
  }
 }

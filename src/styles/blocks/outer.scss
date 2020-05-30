@@ -24,7 +24,9 @@
 
  &__item--active{
 
-  text-decoration: line-through;
+  .outer__link {
+   color:$blue;
+  }
 
  }
 

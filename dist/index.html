@@ -47,7 +47,7 @@
                         </li>
                     </ul>
                 </aside>
-                <section class="section section_home section--active">
+                <section class="section section_home section--active" id="section_home">
                     <div class="top_content">
                         <div class="left_side">
                             <h2 class="title top_content__title">Your next interactive experience</h2>
@@ -133,7 +133,7 @@
                 </section> 
                 <section class="hire_us section ">
                     <h3 class="hire_us__title">You want us to do</h3>
-                    <form action="POST" class="form">
+                    <form action="POST" class="form" id='form'>
                         <div class="form__row">
                             <label class="form__btn">
                                 <input type="checkbox" class="visually-hidden checkbox" name="service">
@@ -150,7 +150,7 @@
                         </div>
                         <div class="form__row">
                             <label  class="form__btn">
-                                <input type="radio" class="visually-hidden checkbox" name="service">
+                                <input type="checkbox" class="visually-hidden checkbox" name="service">
                                 UX Design
                             </label>
                             <label  class="form__btn">
@@ -165,10 +165,12 @@
                             </label>
                         </div>
                         <div class="form__row">
-                            <input type="text" class="form__name form__field" placeholder="Name">
-                            <input type="text" class="form__email form__field" placeholder="Email">
+                            <input type="text" class="form__name form__field" name='name'placeholder="Name">
+                            <span class="error"></span>
+                            <input type="email" class="form__email form__field" pattern=".+@globex.com" name='email' placeholder="Email">
+                            <span class="error"></span>
                         </div>
-                        <button class="form__submit"type="submit">Send Request</button>
+                        <button class="form__submit" type="submit">Send Request</button>
                     </form>
                 </section>
             </div>    
@@ -176,19 +178,19 @@
         <div class="outer visually-hidden">
             <ul class="outer__nav">
                 <li class="outer__item outer__item--active">
-                    <a href="#" class="outer__link">Home</a>
+                    <a href="#section_home" class="outer__link">Home</a>
                 </li>
                 <li class="outer__item">
-                    <a href="#" class="outer__link">Works</a>
+                    <a href="#section_slider" class="outer__link">Works</a>
                 </li>
                 <li class="outer__item">
-                    <a href="#" class="outer__link">About</a>
+                    <a href="#section_about" class="outer__link">About</a>
                 </li>
                 <li class="outer__item">
-                    <a href="#" class="outer__link">Contact</a>
+                    <a href="#section_contacts" class="outer__link">Contact</a>
                 </li>
                 <li class="outer__item">
-                    <a href="#" class="outer__link">Hire us</a>
+                    <a href="#section_form" class="outer__link">Hire us</a>
                 </li>
             </ul>
         </div>

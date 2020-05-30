@@ -24,6 +24,7 @@
   }
 
   &__form_btn {
+    display: none;
 
     @include link_style_none;
     text-transform: uppercase;
